@@ -1,5 +1,5 @@
 [<img src="https://dashboard.asayer.io/assets/logo-507f1d735124eb7b629733a52415bd374776bf107c05352184bbb39d8e3f26f5.png" width="235"/>](https://asayer.io)
-[<img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/codeception/logo.svg"/>](http://specflow.org)
+[<img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/codeception/logo.svg" width="96"/>](http://specflow.org)
 
 # Asayer - Codeception (PHP)
 [Codeception (PHP)](http://codeception.com/) integration with [Asayer](https://asayer.io).
@@ -107,7 +107,7 @@ Clicking on the *Download Assets* button will download a zip file enclosing:
 
 <p align="center">
 <kbd>
-<img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/codeception/download+assets+2.png"/>
+<img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/codeception/download+assets.png"/>
 </kbd>
 </p>
 
