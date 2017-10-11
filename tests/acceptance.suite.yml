@@ -1,0 +1,22 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver
+        - \Helper\AsayerAcceptance
+    config:
+        WebDriver:
+            url: 'http://asayer.io'
+            protocol: https
+            host: 'hub.asayer.io'
+            port: 443
+            browser: chrome
+            capabilities:
+              apikey: 'ASAYER API KEY'
+              name : 'Testing Codeception with Asayer'
+              platform: 'any'
