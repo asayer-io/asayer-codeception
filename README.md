@@ -1,5 +1,5 @@
 [<img src="https://dashboard.asayer.io/assets/logo-507f1d735124eb7b629733a52415bd374776bf107c05352184bbb39d8e3f26f5.png" width="235"/>](https://asayer.io)
-[<img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/codeception/logo.svg" width="96"/>](http://specflow.org)
+[<img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/codeception/logo.svg" width="96"/>](http://codeception.com/)
 
 # Asayer - Codeception (PHP)
 [Codeception (PHP)](http://codeception.com/) integration with [Asayer](https://asayer.io).
