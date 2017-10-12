@@ -4,8 +4,9 @@ namespace Helper;
 
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I
+// this class is used for Asayer-reporting
 
-class AsayerAcceptance extends \Codeception\Module
+class AsayerReporting extends \Codeception\Module
 {
     protected $apikey;
     protected $sessionId;
@@ -67,8 +68,6 @@ class AsayerAcceptance extends \Codeception\Module
                     'testStatus' => $testStatus
                 );
                 $this->sendResults($postData);
-                echo "\n------------------------------------------------------------\n";
-                echo json_encode($postData);
             } else {
                 echo "Asayer: check the requirementID and the testStatus values.\n";
             }

@@ -165,7 +165,7 @@ Below is the list of supported capabilities:
 | Name        | Possible Values           | Default Value  |Description  | Required  |
 | :-------------: |:-------------| :-----:|:-------------|:-----:|
 | `platform`| `linux` `windows` `mac` `android` `ios` `any`| linux | The platform used for the test | yes |
-| `browserName`|`chrome` `firefox` `ie` `safari` `opera` `edge`| chrome | The browser used for the test | yes |
+| `browser`|`chrome` `firefox` `ie` `safari` `opera` `edge`| chrome | The browser used for the test | yes |
 | `flags`|| - |A list of flags to be passed to the browser, see [Fun with Flags](#fun-with-flags) | no |
 | `deviceName`| see the list of [supported mobile devices](#supported-mobile-devices) | - |The android device name to use for the test | yes if `platform` is set to `android` or `ios` |
 
@@ -200,8 +200,7 @@ In the following example, we used some of the Chrome flags:
 ```yml
 ...
 modules:
-    enabled:
-        ...
+    ...
     config:
         WebDriver:
             ...
@@ -237,19 +236,19 @@ Follow the below steps to integrate Asayer with your existing project:
                 port: 443
                 browser: chrome
                 capabilities:
-                  apikey: '282c53b4f3e5c9a95f0b5163c75b9271'
+                  apikey: 'ASAYER API KEY'
                   name : 'Testing Asayer with Codeception'
                   platform: 'any'
                   ....
     ```
 * Have the required [dependencies](#dependencies) installed
-* If you want to add auto-reporting support to your tests, you can add the [`AsayerAcceptance`](https://github.com/asayer-io/asayer-codeception/blob/master/tests/_support/Helper/AsayerAcceptance.php) helper class to your project under `tests\_support\Helper`, and load it after the `WebDriver` in the [`acceptance.suite.yml`](https://github.com/asayer-io/asayer-codeception/blob/master/tests/acceptance.suite.yml) file
+* If you want to add auto-reporting support to your tests, you can add the [`AsayerReporting`](https://github.com/asayer-io/asayer-codeception/blob/master/tests/_support/Helper/AsayerReporting.php) helper class to your project under `tests\_support\Helper`, and load it after the `WebDriver` module in the [`acceptance.suite.yml`](https://github.com/asayer-io/asayer-codeception/blob/master/tests/acceptance.suite.yml) file
     ```
     ...
     modules:
         enabled:
             - WebDriver
-            - \Helper\AsayerAcceptance
+            - \Helper\AsayerReporting
     ...
     ```
 
@@ -313,7 +312,7 @@ Details about the local tests can be found in the [Dashboard](#dashboard). Local
 * Only 3 active tunnels are allowed per organization
 
 ## Mark Session
-Once the session is completed, you can mark the test (either passed or failed) by calling the `markSession(["Passed"|"Failed"])` method of the `AsayerAcceptance` helper class. 
+Once the session is completed, you can mark the test (either passed or failed) by calling the `markSession(["Passed"|"Failed"])` method of the `AsayerReporting` helper class. 
 
 You can also rely on our REST API to do so by submitting `sessionID` and `sessionStatus` parameters:
 
@@ -333,13 +332,13 @@ The state will be visible in the Dashboard:
 <img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/codeception/test+state+2.PNG"/>
 </p>
 
-For reporting purposes, you can call the `markSessionDetails(string state, string requirementID, array testStatus)` method of the `AsayerAcceptance` helper class.
+For reporting purposes, you can call the `markSessionDetails(state, requirementID, testStatus)` method of the `AsayerReporting` helper class.
 
 `markSessionDetails`'s parameters are:
 
 - `state`: the session's state
 - `requirementID`: the session's requirement ID
-- `testStatus`: an array of `testId => testStatus`
+- `testStatus`: an array of `"testId" => "testStatus"`
 
 See the example below:
 
