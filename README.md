@@ -299,7 +299,7 @@ modules:
               tunnelId: "[TUNNEL_ID]"
               ...
 ```
-Once done, build then run your tests as [usual](#run-it). HTTP traffic will then be redirected to the machine on which the `asayer-tunnel` binary is running through a secure connection.
+Once done, run your tests as [usual](#run-it). HTTP traffic will then be redirected to the machine on which the `asayer-tunnel` binary is running through a secure connection.
 
 Details about the local tests can be found in the [Dashboard](#dashboard). Local tests are marked with a *plug* icon.
 
