@@ -367,7 +367,7 @@ Json: {
 Note that every step’s status is automatically reported to Asayer throughout the execution of the test. This may be seen in in the Reporting section, as shown below:
 
 <p align="center">
-<img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/specflow/reporting.PNG"/>
+<img src="https://s3.eu-central-1.amazonaws.com/asayer-samples-assets/codeception/reporting.PNG"/>
 </p>
 
 ## Dependencies
