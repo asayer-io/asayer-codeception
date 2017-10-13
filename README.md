@@ -211,7 +211,7 @@ modules:
                  "--start-fullscreen": true
 ```
 
-These flags will be interpreted as `--incognito --start-fullscreen` (note that `value=""` and `value="true"` are similar).
+These flags will be interpreted as `--incognito --start-fullscreen`.
 
 * Kepp in mind that each browser has its **own and unique** list of flags:
     * [FireFox](https://developer.mozilla.org/fr/docs/Mozilla/Command_Line_Options)
