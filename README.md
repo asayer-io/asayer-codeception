@@ -246,6 +246,8 @@ Follow the below steps to integrate Asayer with your existing project:
                   platform: 'any'
                   ....
     ```
+    - Setup the Application Parameters ([here](#application-parameters)) 
+    - Configure the desired Capabilities ([here](#capabilities))
 * Have the required [dependencies](#dependencies) installed
 * If you want to add auto-reporting support to your tests, you can add the [`AsayerReporting`](https://github.com/asayer-io/asayer-codeception/blob/master/tests/_support/Helper/AsayerReporting.php) helper class to your project under `tests\_support\Helper`, and load it after the `WebDriver` module in the [`acceptance.suite.yml`](https://github.com/asayer-io/asayer-codeception/blob/master/tests/acceptance.suite.yml) file
     ```
